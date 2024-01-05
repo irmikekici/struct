@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct adresdefteri{
+	char ad[100];
+	char soyad[100];
+	char telno[10];
+	char adres[200];
+	char postakodu[6];
+}defter;
+
+int main()
+{
+	int N;
+	int i;
+	char satir;
+	printf("Kac adet kayit tutulacakk\n");
+	scanf("%d",&N);
+	scanf("%c",&satir);
+
+	
+	defter iletisim[N];
+	
+	for(i=0;i<N;i++)
+	{
+		printf("Adi giriniz\n");
+		gets(iletisim[i].ad);
+		
+		printf("Soyadi giriniz\n");
+		gets(iletisim[i].soyad);
+		
+		printf("Tel no giriniz\n");
+		gets(iletisim[i].telno);
+		
+		
+		printf("posta kodu giriniz\n");
+		gets(iletisim[i].postakodu);
+	}
+	
+	printf("ADI\tSOYADI\tTEL NO\tADRES\tPOSTA KODU\n");
+	printf("=====================================\n");
+	
+	for(i=0;i<N;i++)
+	{
+		printf("%s \t %s \t %s \t %s \t %s\n ",iletisim[i].ad,iletisim[i].soyad,iletisim[i].telno,iletisim[i].postakodu,iletisim[i].adres);
+	}
+	
+	return 0;
+}
