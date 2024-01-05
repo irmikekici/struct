@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct degertip
+{
+	int tip;
+	union
+	{
+		char kar;
+		float sayi;
+	}bir;
+};
+
+int main()
+{
+	struct degertip degerler[20];
+	int i=-1;
+	char satir;
+	int j;
+	float ortalama=0.0;
+	int n=0;
+	do
+	{
+		i++;
+		printf("Lutfen bir tam sayi giriniz\n");
+		scanf("%d",&degerler[i].tip);
+		scanf("%c",&satir);
+		
+		if(degerler[i].tip==1)
+		{
+			printf("Karakter giriniz\n");
+			scanf("%c",&deger[i].bir.kar);
+		}
+		else if(degerler[i].tip==0)
+		{
+			printf("Reel sayi giriniz\n");
+			scanf("%f",&deger[i].bir.sayi);
+		}
+		
+	}while(degerler[i].tip==0 || degerler[i].tip==1)
+	
+	for(j=0;j<=i;j++)
+	{
+		if(degerler[j].tip==0)
+		{
+			ortalama +=deger[j].bir.sayi;
+			n++;
+		}
+	}
+	
+	ortalama0ortalama/n;;
+	printf("Reel sayilarin ortalamasi = %f",ortalama);
+	
+	
+	return 0;
+}
